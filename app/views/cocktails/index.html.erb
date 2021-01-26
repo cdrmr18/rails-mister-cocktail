@@ -1,6 +1,18 @@
-<h1>Cocktails#index</h1>
-<p>Find me in app/views/cocktails/index.html.erb</p>
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class=" card mb-4 box-shadow" style="width: 18rem;">
+              <%= image_tag cocktail.image_url, width: 100, height: "auto", class: "card-img-top " %>
+          <div class="card-body">
+            <p class="card-text"><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
+              <p><%= link_to "Add dose", new_cocktail_dose_path(cocktail) %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
 
-<% @cocktails.each do |cocktail| %>
-  <h1><%= cocktail.name %></h1>
-<% end %>
+
+
