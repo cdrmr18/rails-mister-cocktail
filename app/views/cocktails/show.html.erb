@@ -1,6 +1,6 @@
 
 <h1 class="text-center" ><%= @cocktail.name %></h1>
-<p class="text-center"><%= image_tag @cocktail.image_url, width: 300 %></p>
+<p class="text-center"><%= image_tag @cocktail.image_url, style: 'height:25%;width:80%;' %></p>
 
 
 <% @cocktail.doses.each do |dose| %>

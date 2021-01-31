@@ -2,8 +2,8 @@
   <div class="row">
     <% @cocktails.each do |cocktail| %>
       <div class="col-sm-12 col-md-6 col-lg-4">
-        <div class=" card mb-4 box-shadow" style="width: 18rem;">
-              <%= image_tag cocktail.image_url, width: 100, height: "auto", class: "card-img-top " %>
+        <div class=" card mb-4 box-shadow" style="width: 100%;">
+              <%= image_tag cocktail.image_url, style: 'height:250px;width:100%;', class: "card-img-top img-thumbnail" %>
           <div class="card-body">
             <h3 class="card-text text-center"><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
           </div>
