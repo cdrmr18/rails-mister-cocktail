@@ -5,8 +5,7 @@
         <div class=" card mb-4 box-shadow" style="width: 18rem;">
               <%= image_tag cocktail.image_url, width: 100, height: "auto", class: "card-img-top " %>
           <div class="card-body">
-            <p class="card-text"><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
-              <p><%= link_to "Add dose", new_cocktail_dose_path(cocktail) %></p>
+            <h3 class="card-text text-center"><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
           </div>
         </div>
       </div>

@@ -1,5 +1,13 @@
 
-<h1><%= @cocktail.name %></h1>
-<p><%= image_tag @cocktail.image_url, width: 200 %></p>
+<h1 class="text-center" ><%= @cocktail.name %></h1>
+<p class="text-center"><%= image_tag @cocktail.image_url, width: 300 %></p>
 
-<p><%= @doses %></p>
+
+<% @cocktail.doses.each do |dose| %>
+  <p> <%= dose.description %>  <%= dose.ingredient.name %></p>
+  <hr>
+<% end %>
+
+<%= link_to "Add dose", new_cocktail_dose_path(@cocktail) %>
+
+
