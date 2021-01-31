@@ -1,6 +1,7 @@
-<h1>Cocktail Recipe</h1>
+<h1>Add dose</h1>
 
 <%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description, placeholder: 'Choose ingredients' %>
+  <%= f.input :description, placeholder: '6 leaves' %>
+  <%= f.association :ingredient, as: :select%>
   <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
